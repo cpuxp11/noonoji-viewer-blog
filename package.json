@@ -1,0 +1,14 @@
+{
+  "name": "noonoji-viewer-blog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "sync:obsidian": "bash scripts/sync-obsidian.sh"
+  },
+  "dependencies": {
+    "astro": "^5.1.0"
+  }
+}

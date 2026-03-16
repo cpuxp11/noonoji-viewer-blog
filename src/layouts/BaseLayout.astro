@@ -1,0 +1,8 @@
+---
+const { title = '눈오지 뷰어' } = Astro.props;
+---
+<html lang="ko"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>{title}</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;max-width:860px;margin:40px auto;padding:0 16px;line-height:1.75;color:#111827}
+a{color:#2563eb;text-decoration:none}a:hover{text-decoration:underline}.muted{color:#6b7280;font-size:14px}.card{border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:12px 0;background:#f9fafb}
+</style></head><body><slot /></body></html>
