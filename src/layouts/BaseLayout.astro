@@ -10,41 +10,50 @@ const { title = '눈오지의 서재' } = Astro.props;
       :root{
         --fg:#0f172a;
         --muted:#64748b;
-        --border:#d1d5db;
+        --border:#e2e8f0;
         --card:#ffffff;
-        --brand:#2563eb;
+        --brand:#1d4ed8;
       }
       *{box-sizing:border-box}
       body{
         font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
-        line-height:1.75;
+        line-height:1.78;
         color:var(--fg);
         margin:0;
-        background:#f8fafc;
+        background:#ffffff;
       }
-      .container{max-width:920px;margin:20px auto;padding:0 16px 28px}
+      .container{max-width:960px;margin:16px auto;padding:0 16px 34px}
       a{color:var(--brand);text-decoration:none}
       a:hover{text-decoration:underline}
       .muted{color:var(--muted);font-size:14px}
-      .top{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}
-      .pill{
+      header{
         border:1px solid var(--border);
+        border-left:6px solid #2563eb;
+        border-radius:14px;
+        padding:14px 16px;
+        background:#f8fbff;
+        margin-bottom:14px;
+      }
+      .top{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 2px}
+      .pill{
+        border:1px solid #bfdbfe;
         border-radius:999px;
         padding:6px 12px;
-        background:#fff;
-        color:#334155;
+        background:#eff6ff;
+        color:#1e3a8a;
         font-size:13px;
+        font-weight:600;
       }
-      .pill:hover{background:#f1f5f9;text-decoration:none}
+      .pill:hover{background:#dbeafe;text-decoration:none}
       .card{
         border:1px solid var(--border);
         border-radius:12px;
-        padding:14px;
+        padding:16px;
         background:var(--card);
         margin:10px 0;
       }
       h1,h2,h3{line-height:1.3}
-      .site-title{margin-bottom:4px;letter-spacing:-0.01em}
+      .site-title{margin:0 0 4px;letter-spacing:-0.01em}
     </style>
   </head>
   <body>
