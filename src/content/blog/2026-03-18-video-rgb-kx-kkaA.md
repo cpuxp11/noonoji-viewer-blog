@@ -3,7 +3,7 @@ title: AI 에이전트 회사, 진짜 가능할까? (Paperclip 영상 정리)
 date: '2026-03-18'
 summary: 화려한 에이전트 조직도보다 중요한 건 실제 생산성. 영상 핵심을 위임 자동화 관점으로 정리.
 tags: [영상, AI에이전트, 생산성]
-category: videos
+category: worklog
 ---
 
 요즘 AI 커뮤니티에서 자주 보이는 말이 있습니다.
