@@ -9,6 +9,8 @@ const posts = (await getCollection('blog'))
 ---
 <BaseLayout title="전체 글 | 눈오지의 서재">
   <h2>📚 전체 글</h2>
-  <p class="muted">모든 카테고리 글을 최신순으로 보여줍니다.</p>
-  {posts.map((post) => (<PostCard post={post} />))}
+  <p class="muted">모든 카테고리를 최신순으로 보여줍니다.</p>
+  <section class="post-grid">
+    {posts.map((post) => (<PostCard post={post} />))}
+  </section>
 </BaseLayout>

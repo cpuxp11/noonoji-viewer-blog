@@ -9,5 +9,7 @@ const posts = (await getCollection('blog'))
 ---
 <BaseLayout title="영상 | 눈오지의 서재">
   <h2>📹 영상</h2>
-  {posts.map((post) => (<PostCard post={post} />))}
+  <section class="post-grid">
+    {posts.map((post) => (<PostCard post={post} />))}
+  </section>
 </BaseLayout>

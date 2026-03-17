@@ -17,12 +17,14 @@ const counts = {
 <BaseLayout title="눈오지의 서재">
   <section class="card" style="margin-top:10px;">
     <h2 style="margin:0 0 8px;">연재 아카이브</h2>
-    <p class="muted">수업, 운영 로그, 영상 기록을 한 곳에서 볼 수 있어요.</p>
+    <p class="muted">Fuwari 스타일 참고해 카드형으로 읽히게 구성했어요.</p>
     <p>수업 {counts.lessons}편 · 업무일지 {counts.worklog}편 · 영상 {counts.videos}편</p>
   </section>
 
   <h2>최신 글</h2>
-  {latest.map((post) => (
-    <PostCard post={post} />
-  ))}
+  <section class="post-grid">
+    {latest.map((post) => (
+      <PostCard post={post} />
+    ))}
+  </section>
 </BaseLayout>

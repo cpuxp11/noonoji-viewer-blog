@@ -1,9 +1,11 @@
 ---
 import CategoryBadge from './CategoryBadge.astro';
 const { post } = Astro.props;
+const tone = post.data.category === 'lessons' ? 'linear-gradient(135deg,#dbeafe,#eff6ff)' : post.data.category === 'videos' ? 'linear-gradient(135deg,#ffedd5,#fff7ed)' : 'linear-gradient(135deg,#dcfce7,#f0fdf4)';
 ---
 <article class="card post-card">
-  <div class="row">
+  <div class="thumb" style={`background:${tone}`}></div>
+  <div class="meta">
     <CategoryBadge category={post.data.category} />
     <span class="muted">{post.data.date}</span>
   </div>
@@ -12,9 +14,10 @@ const { post } = Astro.props;
 </article>
 
 <style>
-.post-card{transition:transform .14s ease, box-shadow .14s ease}
-.post-card:hover{transform:translateY(-1px); box-shadow:0 8px 18px rgba(15,23,42,.06)}
-.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
-h3{margin:10px 0 6px;letter-spacing:-0.01em}
+.post-card{margin:0;transition:transform .15s ease, box-shadow .15s ease}
+.post-card:hover{transform:translateY(-2px); box-shadow:0 10px 20px rgba(15,23,42,.06)}
+.thumb{height:118px;border-radius:12px;border:1px solid #e5e7eb;margin-bottom:12px}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+h3{margin:10px 0 6px;letter-spacing:-0.01em;font-size:20px}
 p{margin:0;color:#374151}
 </style>
