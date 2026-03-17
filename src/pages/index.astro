@@ -9,28 +9,20 @@ const posts = (await getCollection('blog'))
 
 const latest = posts.slice(0, 8);
 const counts = {
-  lessons: posts.filter(p => p.data.category === 'lessons').length,
-  worklog: posts.filter(p => p.data.category === 'worklog').length,
-  videos: posts.filter(p => p.data.category === 'videos').length,
+  lessons: posts.filter((p) => p.data.category === 'lessons').length,
+  worklog: posts.filter((p) => p.data.category === 'worklog').length,
+  videos: posts.filter((p) => p.data.category === 'videos').length,
 };
 ---
 <BaseLayout title="눈오지의 서재">
   <section class="card" style="margin-top:10px;">
-    <h2 style="margin:0 0 8px;">오늘 뭐가 올라오나</h2>
-    <p class="muted">수업, 운영 로그, 영상 기록을 한 곳에 모아둡니다.</p>
+    <h2 style="margin:0 0 8px;">연재 아카이브</h2>
+    <p class="muted">수업, 운영 로그, 영상 기록을 한 곳에서 볼 수 있어요.</p>
     <p>수업 {counts.lessons}편 · 업무일지 {counts.worklog}편 · 영상 {counts.videos}편</p>
   </section>
 
   <h2>최신 글</h2>
   {latest.map((post) => (
-    <article class="card">
-      <h3><a href={`/posts/${post.id}/`}>{post.data.title}</a></h3>
-      <p class="muted">{post.data.date} · {post.data.category}</p>
-      {post.data.summary && <p>{post.data.summary}</p>}
-    </article>
-  ))}
-</BaseLayout>
-t.data.summary}</p>}
-    </article>
+    <PostCard post={post} />
   ))}
 </BaseLayout>
