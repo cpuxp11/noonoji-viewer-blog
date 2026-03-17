@@ -10,11 +10,9 @@ const { title = '눈오지의 서재' } = Astro.props;
       :root{
         --fg:#0f172a;
         --muted:#64748b;
-        --border:#dbe4f0;
-        --card:#ffffffcc;
+        --border:#d1d5db;
+        --card:#ffffff;
         --brand:#2563eb;
-        --bg1:#f8fbff;
-        --bg2:#eef6ff;
       }
       *{box-sizing:border-box}
       body{
@@ -22,37 +20,31 @@ const { title = '눈오지의 서재' } = Astro.props;
         line-height:1.75;
         color:var(--fg);
         margin:0;
-        background:
-          radial-gradient(900px 400px at 10% -10%, #dbeafe 0%, transparent 60%),
-          radial-gradient(700px 360px at 110% 0%, #e0e7ff 0%, transparent 58%),
-          linear-gradient(180deg, var(--bg1), var(--bg2));
+        background:#f8fafc;
       }
-      .container{max-width:980px;margin:22px auto;padding:0 16px 28px}
+      .container{max-width:920px;margin:20px auto;padding:0 16px 28px}
       a{color:var(--brand);text-decoration:none}
       a:hover{text-decoration:underline}
       .muted{color:var(--muted);font-size:14px}
-      .top{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 20px}
+      .top{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}
       .pill{
         border:1px solid var(--border);
         border-radius:999px;
-        padding:7px 13px;
+        padding:6px 12px;
         background:#fff;
         color:#334155;
-        font-size:14px;
-        transition:all .15s ease;
+        font-size:13px;
       }
-      .pill:hover{background:#eff6ff;border-color:#bfdbfe;text-decoration:none}
+      .pill:hover{background:#f1f5f9;text-decoration:none}
       .card{
         border:1px solid var(--border);
-        border-radius:16px;
-        padding:16px;
+        border-radius:12px;
+        padding:14px;
         background:var(--card);
-        backdrop-filter: blur(6px);
-        margin:12px 0;
-        box-shadow:0 6px 18px rgba(15,23,42,.04);
+        margin:10px 0;
       }
       h1,h2,h3{line-height:1.3}
-      .site-title{margin-bottom:4px;letter-spacing:-0.02em}
+      .site-title{margin-bottom:4px;letter-spacing:-0.01em}
     </style>
   </head>
   <body>
