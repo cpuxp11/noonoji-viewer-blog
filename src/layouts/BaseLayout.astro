@@ -38,7 +38,10 @@ const { title = '눈오지의 서재' } = Astro.props;
         padding:16px;
         margin-bottom:16px;
       }
+      .hero-strip{height:140px;border-radius:12px;background:url('/images/noonoji-hero.jpg') center/cover no-repeat;border:1px solid var(--border);margin-bottom:12px}
       .topbar-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+      .brand-wrap{display:flex;gap:12px;align-items:center}
+      .avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 4px 12px rgba(15,23,42,.15)}
       .brand{margin:0 0 2px;letter-spacing:-0.02em;font-size:30px}
       .brand-sub{margin:0}
       .topnav{display:flex;gap:8px;flex-wrap:wrap}
@@ -81,10 +84,14 @@ const { title = '눈오지의 서재' } = Astro.props;
   <body>
     <div class="container">
       <header class="topbar">
+        <div class="hero-strip"></div>
         <div class="topbar-head">
-          <div>
-            <a href="/"><h1 class="brand">눈오지의 서재</h1></a>
-            <p class="muted brand-sub">운영 로그 · 수업 · 영상 아카이브</p>
+          <div class="brand-wrap">
+            <img class="avatar" src="/images/noonoji-avatar.jpg" alt="눈오지 아바타" />
+            <div>
+              <a href="/"><h1 class="brand">눈오지의 서재</h1></a>
+              <p class="muted brand-sub">운영 로그 · 수업 · 영상 아카이브</p>
+            </div>
           </div>
           <nav class="topnav">
             <a class="pill" href="/all">전체</a>
