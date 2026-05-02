@@ -4,7 +4,7 @@ date: '2026-05-03'
 summary: 단톡에서 "안녕" 한 마디에 답이 오는 데 5분이 걸렸다. 모델이 느린 게 아니었다. 매번 17,000자짜리 매뉴얼을 들고 출근한 게 문제였다.
 tags: [운영, 토큰, AGENTS.md, Thin-Harness]
 category: lessons
-draft: true
+draft: false
 ---
 
 지난주 화요일 오후였다.
